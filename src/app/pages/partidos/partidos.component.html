@@ -1,0 +1,48 @@
+<div class="panel-header panel-header-sm"></div>
+
+<div class="main-content">
+    <h1>Equipos que participarán en el cuadrangular</h1>
+    <form (ngSubmit)="verPartidos(forma)" #forma="ngForm">
+        <table class="table">
+            <thead class="text-primary">
+                <th scope="col">
+                    #
+                </th>
+                <th scope="col">
+                    Equipo Local
+                </th>
+                <th scope="col">
+                    Equipo Visitante
+                </th>
+                <th scope="col">
+                    Goles Local
+                </th>
+                <th scope="col">
+                    Goles Visitante
+                </th>
+                <tbody>
+                    <tr *ngFor="let partido of partidos let i = index">
+                        <td>
+                            {{i+1}}
+                        </td>
+                        <td>
+                            {{partido.EquipoLocal}}
+                        </td>
+                        <td>
+                            {{partido.EquipoVisitante}}
+                        </td>
+                        <td>
+                            <input type="text" name="Local{{i}}" class="form-control" placeholder="Goles del equipo local" id="Local{{i}}" ngModel>
+                        </td>
+                        <td>
+                            <input type="text" name="Visitante{{i}}" class="form-control" placeholder="Goles del equipo visitante" id="Visitante{{i}}" ngModel>
+                        </td>
+                    </tr>
+                </tbody>
+        </table>
+        <button type="submit" class="btn btn-primary">Generar Partidos</button>
+    </form>
+    <hr>
+
+
+</div>

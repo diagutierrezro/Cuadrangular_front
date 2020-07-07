@@ -1,0 +1,35 @@
+<div class="panel-header panel-header-sm"></div>
+
+<div class="main-content">
+    <h1>Equipos que participarán en el cuadrangular</h1>
+    <form (ngSubmit)="guardarEquipos(forma)" #forma="ngForm">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="Equipo1">Equipo 1</label>
+                <input type="text" name="equipo1" class="form-control" placeholder="Nombre del primer equipo" id="equipo1" ngModel>
+            </div>
+            <div class="col-md-6">
+                <label for="Equipo1">Equipo 2</label>
+                <input type="text" name="equipo2" class="form-control" placeholder="Nombre del segundo equipo" id="equipo2" ngModel>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="Equipo1">Equipo 3</label>
+                <input type="text" name="equipo3" class="form-control" placeholder="Nombre del tercer equipo" id="equipo3" ngModel>
+            </div>
+            <div class="col-md-6">
+                <label for="Equipo1">Equipo 4</label>
+                <input type="text" name="equipo4" class="form-control" placeholder="Nombre del cuarto equipo" id="equipo4" ngModel>
+            </div>
+        </div>
+        <hr>
+        <button type="submit" class="btn btn-primary">Registrar equipos</button>
+        <hr>
+    </form>
+    <button class="btn btn-primary" (click)="generarPartidos()" onclick="window.location.href = '../partidos';">Generar Partidos</button>
+
+    <hr>
+
+
+</div>

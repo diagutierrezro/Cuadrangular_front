@@ -1,0 +1,12 @@
+version: '3.5'
+
+services:
+    front:
+        build: ./
+        image: cuadrangular-front
+        container_name: cuadrangular-front
+        command: sh -c 'npm install; npm install node-sass --save; ng serve  --host 4000 --port 4000'  
+        ports:
+            - "4000:4000" # servicio angular
+        volumes:
+            - .:/app
