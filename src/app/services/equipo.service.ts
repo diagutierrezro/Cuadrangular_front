@@ -7,7 +7,7 @@ import { EquipoModel } from '../models/equipo.model';
 })
 export class EquipoService {
 
-  private url = 'http://172.17.0.1:6673/v1'
+  private url = 'http://localhost:6673/v1'
 
   constructor( private http: HttpClient) { }
 

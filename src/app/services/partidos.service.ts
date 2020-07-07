@@ -9,7 +9,7 @@ import { timeout, catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class PartidoService {
-  private url = 'http://172.17.0.1:6673/v1'
+  private url = 'http://localhost:6673/v1'
 
 
   constructor( private http: HttpClient) { }
